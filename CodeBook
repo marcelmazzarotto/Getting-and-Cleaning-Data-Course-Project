@@ -1,0 +1,145 @@
+This CodeBook file aims at describing the data set created in this Project.
+Since it is a new data set, the codebook appended to the raw data set may not be sufficient
+to provide all the relevant information.
+
+"GroupedData.txt" was created from the original dataset and transformed by following 5 main steps:
+
+1) Merge "X_train.txt" & "x_test.txt"; "y_train.txt" & "y_test.txt" to create one dataset.
+
+2) From the set of measurements that were estimated, only those on mean and standard deviation were selected
+to create the new dataset. Therefore, the number of variables was slashed from 561 to 68.
+
+3) The values of the column "Activity", originally derived from the non-specific "Id" variable,
+were replaced by their respective labels.
+
+4) The variable names were updated in order to improve readability.
+
+5) The 68-variable dataset was grouped by "Subject" and "Activity" and the mean function was applied to each group
+and variable. Therefore, the outcome is a dataset containing average values of each variable for each group.
+
+The script for such procedure is in "run_analysis.R", listed in this repo.
+
+
+GroupedData.txt:
+Data Table/Data Frame with 180 observations and 68 variables:
+
+ [1] "Subject"
+      - Volunteer Id number. Ranges from 1:30
+ [2] "Activity" 
+      - Activity Perfomed (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING)
+      
+ [3] "TimeBodyAccelerometer-Mean()-X"                
+ [4] "TimeBodyAccelerometer-Mean()-Y"                
+ [5] "TimeBodyAccelerometer-Mean()-Z"                
+ [6] "TimeBodyAccelerometer-Std()-X"                 
+ [7] "TimeBodyAccelerometer-Std()-Y"                 
+ [8] "TimeBodyAccelerometer-Std()-Z"
+      - Variables [3:8]. Mean and standard deviation vectors of time domain signals from the smartphone accelerometer X, Y, and Z
+        axes in seconds.
+      
+ [9] "TimeGravityAccelerometer-Mean()-X"             
+[10] "TimeGravityAccelerometer-Mean()-Y"             
+[11] "TimeGravityAccelerometer-Mean()-Z"             
+[12] "TimeGravityAccelerometer-Std()-X"              
+[13] "TimeGravityAccelerometer-Std()-Y"              
+[14] "TimeGravityAccelerometer-Std()-Z" 
+      - Variables [9:14]. Mean and standard deviation vectors of X, Y, and Z axes gravity acceleration signals in standard gravity
+      unit "g" derived in time.
+
+[15] "TimeBodyAccelerometerJerk-Mean()-X"            
+[16] "TimeBodyAccelerometerJerk-Mean()-Y"            
+[17] "TimeBodyAccelerometerJerk-Mean()-Z"            
+[18] "TimeBodyAccelerometerJerk-Std()-X"             
+[19] "TimeBodyAccelerometerJerk-Std()-Y"             
+[20] "TimeBodyAccelerometerJerk-Std()-Z" 
+       - Variables [15:20]. Mean and standard deviation vectors of tri-axial (X, Y, Z) body linear acceleration derived in time 
+       to obtain Jerk signals.
+       
+[21] "TimeBodyGyroscope-Mean()-X"                    
+[22] "TimeBodyGyroscope-Mean()-Y"                    
+[23] "TimeBodyGyroscope-Mean()-Z"                    
+[24] "TimeBodyGyroscope-Std()-X"                     
+[25] "TimeBodyGyroscope-Std()-Y"                     
+[26] "TimeBodyGyroscope-Std()-Z" 
+      - Variables [21:26]. Mean and standard deviation vectors of the angular velocity vector measured by the gyroscope for
+      each window sample. The units are radians/second. 
+
+[27] "TimeBodyGyroscopeJerk-Mean()-X"                
+[28] "TimeBodyGyroscopeJerk-Mean()-Y"                
+[29] "TimeBodyGyroscopeJerk-Mean()-Z"                
+[30] "TimeBodyGyroscopeJerk-Std()-X"                 
+[31] "TimeBodyGyroscopeJerk-Std()-Y"                 
+[32] "TimeBodyGyroscopeJerk-Std()-Z"  
+       - Variables [27:32]. Mean and standard deviation vectors of angular velocity derived in time to obtain Jerk signals.
+       The units are radians/second. 
+       
+[33] "TimeBodyAccelerometerMagnitude-Mean()"         
+[34] "TimeBodyAccelerometerMagnitude-Std()"
+      - Variables [33:34]. Mean and standard deviation vectors of the magnitude of body linear acceleration for the
+      three-dimensional signals calculated using the Euclidean norm. The units are radians/second. 
+      
+[35] "TimeGravityAccelerometerMagnitude-Mean()"      
+[36] "TimeGravityAccelerometerMagnitude-Std()" 
+      - Variables [35:36]. Mean and standard deviation vectors of the magnitude of angular velocity. In standard gravity units 'g' per
+      second
+      
+[37] "TimeBodyAccelerometerJerkMagnitude-Mean()"     
+[38] "TimeBodyAccelerometerJerkMagnitude-Std()" 
+       - Variables [37:38]. Mean and standard deviation vectors of the magnitude of body linear acceleration
+       derived in time. The units are radians/second. 
+       
+[39] "TimeBodyGyroscopeMagnitude-Mean()"             
+[40] "TimeBodyGyroscopeMagnitude-Std()" 
+       - Variables [39:40]. Mean and standard deviation vectors of the magnitude of angular velocity for the
+      three-dimensional signals calculated using the Euclidean norm. The units are radians/second. 
+      
+[41] "TimeBodyGyroscopeJerkMagnitude-Mean()"         
+[42] "TimeBodyGyroscopeJerkMagnitude-Std()" 
+       - Variables [41:42]. Mean and standard deviation vectors of the magnitude of angular velocity
+       derived in time. The units are radians/second. 
+       
+[43] "FrequencyBodyAccelerometer-Mean()-X"           
+[44] "FrequencyBodyAccelerometer-Mean()-Y"           
+[45] "FrequencyBodyAccelerometer-Mean()-Z"           
+[46] "FrequencyBodyAccelerometer-Std()-X"            
+[47] "FrequencyBodyAccelerometer-Std()-Y"            
+[48] "FrequencyBodyAccelerometer-Std()-Z"
+       - Variables [43:48]. Mean and standard deviation vectors of frequency domain signals from the smartphone accelerometer
+       X, Y, and Z axes in a corner frequency of 0.3 HZ.
+       
+[49] "FrequencyBodyAccelerometerJerk-Mean()-X"       
+[50] "FrequencyBodyAccelerometerJerk-Mean()-Y"       
+[51] "FrequencyBodyAccelerometerJerk-Mean()-Z"       
+[52] "FrequencyBodyAccelerometerJerk-Std()-X"        
+[53] "FrequencyBodyAccelerometerJerk-Std()-Y"        
+[54] "FrequencyBodyAccelerometerJerk-Std()-Z"
+      - Variables [49:54]. Mean and standard deviation vectors of the frequency body linear acceleration derived in time 
+       to obtain Jerk signals. The units are in Hz.
+       
+[55] "FrequencyBodyGyroscope-Mean()-X"               
+[56] "FrequencyBodyGyroscope-Mean()-Y"               
+[57] "FrequencyBodyGyroscope-Mean()-Z"               
+[58] "FrequencyBodyGyroscope-Std()-X"                
+[59] "FrequencyBodyGyroscope-Std()-Y"                
+[60] "FrequencyBodyGyroscope-Std()-Z"
+      - Variables [55:60]. Mean and standard deviation vectors of the frequency of angular velocity measured by the gyroscope for
+      each window sample. The units are in Hz.
+      
+[61] "FrequencyBodyAccelerometerMagnitude-Mean()"    
+[62] "FrequencyBodyAccelerometerMagnitude-Std()" 
+      - Variables [61:62]. Mean and standard deviation vectors of the  frequency of the magnitude of body linear acceleration for the
+      three-dimensional signals calculated using the Euclidean norm. The units are in Hz. 
+      
+[63] "FrequencyBodyAccelerometerJerkMagnitude-Mean()"
+[64] "FrequencyBodyAccelerometerJerkMagnitude-Std()" 
+      - Variables [63:64]. Mean and standard deviation vectors of the frequency of the magnitude of body linear acceleration
+       derived in time. The units are in Hz. 
+[65] "FrequencyBodyGyroscopeMagnitude-Mean()"        
+[66] "FrequencyBodyGyroscopeMagnitude-Std()"  
+      - Variables [65:66]. Mean and standard deviation vectors of the frequency of the magnitude of angular velocity for the
+      three-dimensional signals calculated using the Euclidean norm. The units are in Hz.
+      
+[67] "FrequencyBodyGyroscopeJerkMagnitude-Mean()"    
+[68] "FrequencyBodyGyroscopeJerkMagnitude-Std()"
+     - Variables [41:42]. Mean and standard deviation vectors of the frequency of the magnitude of angular velocity
+       derived in time. The units are in Hz.
