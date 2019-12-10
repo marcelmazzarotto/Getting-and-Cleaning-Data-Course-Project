@@ -10,6 +10,6 @@
  Along with this README.md file, this repository contains the following files:
 
 - CodeBook.md, which adresses the variables, the data, and transformations that were performed to clean up the data;
-- ProjectAnalysis.R, a script for performing the analysis in RStudio. 
+- run_analysis.R, a script for performing the analysis in RStudio. 
 - GroupedData.txt, which is the new data set created to meet the requirements of the project.
  
