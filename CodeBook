@@ -134,6 +134,7 @@ Data Table/Data Frame with 180 observations and 68 variables:
 [64] "FrequencyBodyAccelerometerJerkMagnitude-Std()" 
       - Variables [63:64]. Mean and standard deviation vectors of the frequency of the magnitude of body linear acceleration
        derived in time. The units are in Hz. 
+       
 [65] "FrequencyBodyGyroscopeMagnitude-Mean()"        
 [66] "FrequencyBodyGyroscopeMagnitude-Std()"  
       - Variables [65:66]. Mean and standard deviation vectors of the frequency of the magnitude of angular velocity for the
