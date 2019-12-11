@@ -17,17 +17,18 @@ were replaced by their respective labels.
 5) The 68-variable dataset was grouped by "Subject" and "Activity" and the mean function was applied to each group
 and variable. Therefore, the outcome is a dataset containing average values of each variable for each group.
 
-The script for such procedure is in "run_analysis.R", listed in this repo.
+The script for such procedure is in "run_analysis.R" listed in this repo.
 
 
 GroupedData.txt:
 Data Table/Data Frame with 180 observations and 68 variables:
+Note: "X", "Y", and "Z" refer to the axes of the three-dimensional accelerometer.
 
  [1] "Subject"
       - Volunteer Id number. Ranges from 1:30
  [2] "Activity" 
       - Activity Perfomed (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING)
-      
+ 
  [3] "TimeBodyAccelerometer-Mean()-X"                
  [4] "TimeBodyAccelerometer-Mean()-Y"                
  [5] "TimeBodyAccelerometer-Mean()-Z"                
@@ -142,5 +143,5 @@ Data Table/Data Frame with 180 observations and 68 variables:
       
 [67] "FrequencyBodyGyroscopeJerkMagnitude-Mean()"    
 [68] "FrequencyBodyGyroscopeJerkMagnitude-Std()"
-     - Variables [41:42]. Mean and standard deviation vectors of the frequency of the magnitude of angular velocity
+     - Variables [67:68]. Mean and standard deviation vectors of the frequency of the magnitude of angular velocity
        derived in time. The units are in Hz.
